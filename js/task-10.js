@@ -8,10 +8,11 @@ const boxes = document.querySelector("#boxes");
 create.addEventListener("click", createBoxes);
 destroy.addEventListener("click", destroyBoxes);
 const arrDiv = [];
-
+const minNumber = Number(input.getAttribute("min"));
+const maxNumber = Number(input.getAttribute("max"));
 function createBoxes(amount) {
-  if (input.value < Number(input.getAttribute("min")) || input.value > Number(input.getAttribute("max"))) {
-    alert("Прошу вибрати число від " + Number(input.getAttribute("min")) + " до " + Number(input.getAttribute("max")));
+  if (input.value < minNumber || input.value > maxNumber) {
+    alert("Прошу вибрати число від " + minNumber + " до " + maxNumber);
   }
   else {
     amount = input.value;
