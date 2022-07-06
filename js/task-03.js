@@ -12,12 +12,7 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-// const item = ({ url, alt }) =>
-//   `<li><img src="${url}" alt="${alt}"></li>`;
-// const items = images.reduce((acc, img) =>
-//   acc + item(img), ""
-// );
-// Переписав через map:
+
 const items = images.map((image) => {
   return ("<li><img src=" + image.url + " alt=" + image.alt + "></li>");
 });
@@ -25,6 +20,7 @@ const list = document.querySelector(".gallery");
 list.insertAdjacentHTML("afterbegin", items);
 list.setAttribute("style", "list-style-type:none; display: flex");
 const imgs = list.querySelectorAll("img");
-for(let img of imgs) {
+
+imgs.forEach(function (img) {
   img.setAttribute("style", "height:200px; border:4px solid red; margin-right:10px");
-}
+})

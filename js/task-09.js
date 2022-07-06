@@ -6,7 +6,6 @@ const color = document.querySelector(".color");
 changeColor.addEventListener("click", handleClick);
 function handleClick() {
   const currentColor = getRandomHexColor();
-  // changeColor.setAttribute("background-color", currentColor);
   changeColor.style.backgroundColor = currentColor;
   color.innerHTML = currentColor;
 }
